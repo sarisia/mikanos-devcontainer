@@ -3,7 +3,7 @@
 [ゼロからのOS自作入門](https://zero.osdev.jp/) で開発するOS (MikanOS) の
 開発環境が設定された [VSCode Devcontainer](https://code.visualstudio.com/docs/remote/containers) 設定ファイル.
 
-<!--zenn--->
+[Docker ではじめる "ゼロからのOS自作入門" | Zenn](https://zenn.dev/sarisia/articles/6b57ea835344b6)
 
 ベースイメージの詳細については [github.com/sarisia/mikanos-docker](https://github.com/sarisia/mikanos-docker)
 を参照してください.
