@@ -12,10 +12,11 @@
 
 ## テンプレートからリポジトリを作成
 
-当リポジトリページの右上 "Use this template" からリポジトリを作成してください.
+1. 当リポジトリページの右上 "Use this template" からリポジトリを作成 ([GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template))
 
-詳しい手順は [GitHub Docs](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
-を参照してください.
+2. ローカルにチェックアウト
+
+3. VSCode で devcontainer を開く ([VSCode Docs](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container))
 
 ## 既存のリポジトリに追加
 
