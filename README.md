@@ -21,6 +21,11 @@
 当リポジトリの `.devcontainer` ディレクトリ, 及び含まれるファイルをダウンロードし,
 既存のリポジトリに追加してください.
 
+# M1 Mac で使う
+
+クロスコンパイル関連の追加の設定が必要です.
+[`mikanos-docker` のドキュメント](https://github.com/sarisia/mikanos-docker#m1-mac-%E3%81%A7%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AF) を参照して下さい.
+
 # バグ, 要望
 
 [Twitter (@A1ces)](https://twitter.com/A1ces) や [Issues](https://github.com/sarisia/mikanos-devcontainer/issues) で教えてくださると嬉しいです！
