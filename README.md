@@ -6,6 +6,8 @@
 ベースイメージの詳細については [github.com/sarisia/mikanos-docker](https://github.com/sarisia/mikanos-docker)
 を参照してください.
 
+使用例: [github.com/sarisia/mikanos](https://github.com/sarisia/mikanos)
+
 # 使い方
 
 ## テンプレートからリポジトリを作成
