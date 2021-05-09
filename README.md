@@ -48,22 +48,22 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
   を参考に, 以下の設定を追加して下さい:
 
   ```json
-  "forwardPorts": [6080],
-	"overrideCommand": false,
-	"containerEnv": {
-		// Port for noVNC Web Client & WebSocket
-		"NOVNC_PORT": "6080",
-		// VNC port QEMU listens. Default to 5900 + <display number>
-		// If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
-		"VNC_PORT": "5900",
-		// QEMU launch options. Used in `run_image.sh`
-		"QEMU_OPTS": "-vnc :0"
-	},
+"forwardPorts": [6080],
+"overrideCommand": false,
+"containerEnv": {
+    // Port for noVNC Web Client & WebSocket
+    "NOVNC_PORT": "6080",
+    // VNC port QEMU listens. Default to 5900 + <display number>
+    // If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
+    "VNC_PORT": "5900",
+    // QEMU launch options. Used in `run_image.sh`
+    "QEMU_OPTS": "-vnc :0"
+},
   ```
 
 - (GitHub Codespaces) ポートを公開
 
-  [GitHub Codespaces でのコンテナ起動後](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace)に,
+  [GitHub Codespaces でのコンテナ作成後](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace)に,
   エディタ下部 `Port` タブより, `NOVNC_PORT` を "Make public" に設定して下さい:
 
 
