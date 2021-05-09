@@ -64,9 +64,14 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
 - (GitHub Codespaces) ポートを公開
 
   [GitHub Codespaces でのコンテナ作成後](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace)に,
-  エディタ下部 `Port` タブより, `NOVNC_PORT` を "Make public" に設定して下さい:
+  エディタ下部 `Port` タブより, `NOVNC_PORT` を "Make Public" に設定して下さい:
 
+  ![image](https://user-images.githubusercontent.com/33576079/117560621-4c01c980-b0ca-11eb-85c1-0e0d3a4f69ad.png)
+  
+## カスタマイズ
 
+環境変数を通じてカスタマイズが可能です. 詳細は [mikanos-docker ドキュメント](https://github.com/sarisia/mikanos-docker#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)
+を参照して下さい.
 
 # バグ, 要望
 
