@@ -47,7 +47,7 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
   最新の [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json)
   を参考に, 以下の設定を追加して下さい:
 
-  ```json
+```json
 "forwardPorts": [6080],
 "overrideCommand": false,
 "containerEnv": {
@@ -59,7 +59,7 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
     // QEMU launch options. Used in `run_image.sh`
     "QEMU_OPTS": "-vnc :0"
 },
-  ```
+```
 
 - (GitHub Codespaces) ポートを公開
 
