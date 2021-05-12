@@ -10,17 +10,17 @@
 	},
 
 	// Comment out to enable noVNC for GitHub Codespaces
-	"forwardPorts": [6080],
-	"overrideCommand": false,
-	"containerEnv": {
-		// Port for noVNC Web Client & WebSocket
-		"NOVNC_PORT": "6080",
-		// VNC port QEMU listens. Default to 5900 + <display number>
-		// If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
-		"VNC_PORT": "5900",
-		// QEMU launch options. Used in `run_image.sh`
-		"QEMU_OPTS": "-vnc :0"
-	},
+	// "forwardPorts": [6080],
+	// "overrideCommand": false,
+	// "containerEnv": {
+	// 	// Port for noVNC Web Client & WebSocket
+	// 	"NOVNC_PORT": "6080",
+	// 	// VNC port QEMU listens. Default to 5900 + <display number>
+	// 	// If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
+	// 	"VNC_PORT": "5900",
+	// 	// QEMU launch options. Used in `run_image.sh`
+	// 	"QEMU_OPTS": "-vnc :0"
+	// },
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
