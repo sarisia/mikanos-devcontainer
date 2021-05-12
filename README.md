@@ -28,51 +28,6 @@
 クロスコンパイル関連の追加の設定が必要です.
 [`mikanos-docker` のドキュメント](https://github.com/sarisia/mikanos-docker#m1-mac-%E3%81%A7%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AF) を参照して下さい.
 
-# VNC イメージ
-
-VNC 設定を有効にすることで, ホストに X11 Server を用意すること無く, MikanOSの
-動作確認をすることが可能です. また, [GitHub Codespaces](https://github.com/features/codespaces)
-を利用することで, ブラウザのみでコーディング&動作確認を完結することができます.
-
-## 設定
-
-- 利用するイメージを `ghcr.io/sarisia/mikanos:vnc` に設定
-
-  `.devcontainer/Dockerfile` を直接変更する, もしくは最新の
-  [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json) と
-  [`.devcontainer/Dockerfile`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/Dockerfile) を参考に設定して下さい.
-
-- devcontainer 設定を追加
-
-  最新の [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json)
-  を参考に, 以下の設定を追加して下さい:
-
-    ```json
-    "forwardPorts": [6080],
-    "overrideCommand": false,
-    "containerEnv": {
-        // Port for noVNC Web Client & WebSocket
-        "NOVNC_PORT": "6080",
-        // VNC port QEMU listens. Default to 5900 + <display number>
-        // If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
-        "VNC_PORT": "5900",
-        // QEMU launch options. Used in `run_image.sh`
-        "QEMU_OPTS": "-vnc :0"
-    },
-    ```
-
-- (GitHub Codespaces) ポートを公開
-
-  [GitHub Codespaces でのコンテナ作成後](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace)に,
-  エディタ下部 `Port` タブより, `NOVNC_PORT` を "Make Public" に設定して下さい:
-
-  ![image](https://user-images.githubusercontent.com/33576079/117560621-4c01c980-b0ca-11eb-85c1-0e0d3a4f69ad.png)
-  
-## カスタマイズ
-
-環境変数を通じてカスタマイズが可能です. 詳細は [mikanos-docker ドキュメント](https://github.com/sarisia/mikanos-docker#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)
-を参照して下さい.
-
 # バグ, 要望
 
 [Twitter (@A1ces)](https://twitter.com/A1ces) や [Issues](https://github.com/sarisia/mikanos-devcontainer/issues) で教えてくださると嬉しいです！
