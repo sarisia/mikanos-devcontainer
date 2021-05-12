@@ -1,6 +1,6 @@
 # See here for image contents: https://github.com/sarisia/mikanos-docker
-ARG VARIANT=latest
-FROM ghcr.io/sarisia/mikanos:${VARIANT}
+
+FROM ghcr.io/sarisia/mikanos:latest
 
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

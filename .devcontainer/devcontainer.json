@@ -1,25 +1,11 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/sarisia/mikanos-devcontainer
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/ubuntu
 {
 	"name": "MikanOS",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Choose variant: latest, vnc
-		// Set `vnc` to spin up noVNC services. Useful in GitHub Codespaces.
-		"args": { "VARIANT": "latest" }
-	},
-
-	// Comment out to enable noVNC for GitHub Codespaces
-	"forwardPorts": [6080],
-	"overrideCommand": false,
-	"containerEnv": {
-		// Port for noVNC Web Client & WebSocket
-		"NOVNC_PORT": "6080",
-		// VNC port QEMU listens. Default to 5900 + <display number>
-		// If you run QEMU with "-vnc :1", then VNC_PORT should be 5901.
-		"VNC_PORT": "5900",
-		// QEMU launch options. Used in `run_image.sh`
-		"QEMU_OPTS": "-vnc :0"
+		// Update 'VARIANT' to pick an Ubuntu version: focal, bionic
+		"args": { "VARIANT": "focal" }
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -31,6 +17,9 @@
 	"extensions": [
 		"ms-vscode.cpptools"
 	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
