@@ -60,13 +60,6 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
         "QEMU_OPTS": "-vnc :0"
     },
     ```
-
-- (GitHub Codespaces) ポートを公開
-
-  [GitHub Codespaces でのコンテナ作成後](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace)に,
-  エディタ下部 `Port` タブより, `NOVNC_PORT` を "Make Public" に設定して下さい:
-
-  ![image](https://user-images.githubusercontent.com/33576079/117560621-4c01c980-b0ca-11eb-85c1-0e0d3a4f69ad.png)
   
 ## カスタマイズ
 
