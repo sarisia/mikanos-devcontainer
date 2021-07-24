@@ -66,6 +66,14 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
 環境変数を通じてカスタマイズが可能です. 詳細は [mikanos-docker ドキュメント](https://github.com/sarisia/mikanos-docker#%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)
 を参照して下さい.
 
+# FAQ
+
+## QEMU がロゴから先に進まない
+
+たまに発生しますが, 原因不明です.
+
+VSCode コマンドパレット -> `Remote-Containers: Rebuild Container` を選択して Docker コンテナを再作成してください.
+
 # バグ, 要望
 
 [Twitter (@A1ces)](https://twitter.com/A1ces) や [Issues](https://github.com/sarisia/mikanos-devcontainer/issues) で教えてくださると嬉しいです！
