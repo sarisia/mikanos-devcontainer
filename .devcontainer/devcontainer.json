@@ -9,7 +9,7 @@
 		"args": { "VARIANT": "latest" }
 	},
 
-	// Comment out to enable noVNC for GitHub Codespaces
+	// Uncomment to enable noVNC for GitHub Codespaces
 	// "forwardPorts": [6080],
 	// "overrideCommand": false,
 	// "containerEnv": {
