@@ -81,5 +81,6 @@ VSCode コマンドパレット -> `Remote-Containers: Rebuild Container` を選
 # 参考
 
 - [Docker ではじめる "ゼロからのOS自作入門" | Zenn](https://zenn.dev/sarisia/articles/6b57ea835344b6)
+- [ブラウザだけでOS自作入門しよう | Zenn](https://zenn.dev/sarisia/articles/8dbe4fe2f1c656)
 - [「ゼロからのOS自作入門」の副読本的記事 | Zenn](https://zenn.dev/karaage0703/articles/1bdb8930182c6c)
   - devcontainer の起動方法や, macOS での X11 Server の設定などが大変分かりやすく説明されています
