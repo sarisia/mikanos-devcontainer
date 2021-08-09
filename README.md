@@ -74,6 +74,10 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
 
 VSCode コマンドパレット -> `Remote-Containers: Rebuild Container` を選択して Docker コンテナを再作成してください.
 
+## VSCode で devcontainer を開くと、「A mount config is invalid. Make sure it has the right format and a source folder that exists on the machine where the Docker daemon is running.」というエラーが表示される
+
+Docker Desktopの権限が不足しています。Preferences->Resources->FILE SHARINGからレポジトリをチェックアウトしたディレクトリを追加してください。
+
 # バグ, 要望
 
 [Twitter (@A1ces)](https://twitter.com/A1ces) や [Issues](https://github.com/sarisia/mikanos-devcontainer/issues) で教えてくださると嬉しいです！
