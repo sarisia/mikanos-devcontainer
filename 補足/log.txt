@@ -1,0 +1,47 @@
+[2021-08-09T14:56:23.467Z] Remote-Containers 0.191.0 in VS Code 1.59.0 (379476f0e13988d90fab105c5c19e7abc8b1dea8).
+[2021-08-09T14:56:23.467Z] Start: Resolving Remote
+[2021-08-09T14:56:23.471Z] Setting up container for folder or workspace: /Users/mac/Documents/dev/mikanos-devcontainer
+[2021-08-09T14:56:23.473Z] Start: Check Docker is running
+[2021-08-09T14:56:23.473Z] Start: Run: docker version --format {{.Server.APIVersion}}
+[2021-08-09T14:56:23.644Z] Stop (171 ms): Run: docker version --format {{.Server.APIVersion}}
+[2021-08-09T14:56:23.644Z] Server API version: 1.41
+[2021-08-09T14:56:23.644Z] Stop (171 ms): Check Docker is running
+[2021-08-09T14:56:23.670Z] Start: Run: git rev-parse --show-cdup
+[2021-08-09T14:56:23.692Z] Stop (22 ms): Run: git rev-parse --show-cdup
+[2021-08-09T14:56:23.693Z] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer --filter label=vsch.quality=stable
+[2021-08-09T14:56:23.886Z] Stop (193 ms): Run: docker ps -q -a --filter label=vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer --filter label=vsch.quality=stable
+[2021-08-09T14:56:23.889Z] Start: Run: docker build -f /Users/mac/Documents/dev/mikanos-devcontainer/.devcontainer/Dockerfile -t vsc-mikanos-devcontainer-5fd8905d21e58b0aa93fd98f44bc7d06 --build-arg VARIANT=latest /Users/mac/Documents/dev/mikanos-devcontainer/.devcontainer
+[2021-08-09T14:56:24.694Z] 
+[2021-08-09T14:56:24.694Z] [+] Building 0.0s (0/1)                                                         
+[2021-08-09T14:56:24.821Z] [+] Building 0.1s (3/3)                                                         
+ => [internal] load build definition from Dockerfile                       0.0s
+[2021-08-09T14:56:24.821Z]  => => transferring dockerfile: 37B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for ghcr.io/sarisia/mikanos:latest            0.0s
+[2021-08-09T14:56:24.839Z] [+] Building 0.1s (5/5) FINISHED                                                
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 37B                                        0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load metadata for ghcr.io/sarisia/mikanos:latest            0.0s
+ => CACHED [1/1] FROM ghcr.io/sarisia/mikanos:latest                       0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:d6c9296b4e3b7f1f879016c222eed44df40a5f70140c1  0.0s
+ => => naming to docker.io/library/vsc-mikanos-devcontainer-5fd8905d21e58  0.0s
+[2021-08-09T14:56:25.342Z] 
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+[2021-08-09T14:56:25.365Z] Stop (1476 ms): Run: docker build -f /Users/mac/Documents/dev/mikanos-devcontainer/.devcontainer/Dockerfile -t vsc-mikanos-devcontainer-5fd8905d21e58b0aa93fd98f44bc7d06 --build-arg VARIANT=latest /Users/mac/Documents/dev/mikanos-devcontainer/.devcontainer
+[2021-08-09T14:56:25.367Z] Start: Run: docker events --format {{json .}} --filter event=start
+[2021-08-09T14:56:25.369Z] Start: Starting container
+[2021-08-09T14:56:25.369Z] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/Users/mac/Documents/dev/mikanos-devcontainer,target=/workspaces/mikanos-devcontainer,consistency=cached --mount type=volume,src=vscode,dst=/vscode -l vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer -l vsch.quality=stable -l vsch.remote.devPort=0 --privileged --disable-content-trust=true --entrypoint /bin/sh vsc-mikanos-devcontainer-5fd8905d21e58b0aa93fd98f44bc7d06 -c echo Container started
+[2021-08-09T14:56:25.884Z] docker: Error response from daemon: invalid mount config for type "bind": bind source path does not exist: /Users/mac/Documents/dev/mikanos-devcontainer.
+See 'docker run --help'.
+[2021-08-09T14:56:25.909Z] Stop (540 ms): Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/Users/mac/Documents/dev/mikanos-devcontainer,target=/workspaces/mikanos-devcontainer,consistency=cached --mount type=volume,src=vscode,dst=/vscode -l vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer -l vsch.quality=stable -l vsch.remote.devPort=0 --privileged --disable-content-trust=true --entrypoint /bin/sh vsc-mikanos-devcontainer-5fd8905d21e58b0aa93fd98f44bc7d06 -c echo Container started
+[2021-08-09T14:56:25.910Z] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer --filter label=vsch.quality=stable
+[2021-08-09T14:56:26.092Z] Stop (182 ms): Run: docker ps -q -a --filter label=vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer --filter label=vsch.quality=stable
+[2021-08-09T14:56:26.096Z] Command failed: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/Users/mac/Documents/dev/mikanos-devcontainer,target=/workspaces/mikanos-devcontainer,consistency=cached --mount type=volume,src=vscode,dst=/vscode -l vsch.local.folder=/Users/mac/Documents/dev/mikanos-devcontainer -l vsch.quality=stable -l vsch.remote.devPort=0 --privileged --disable-content-trust=true --entrypoint /bin/sh vsc-mikanos-devcontainer-5fd8905d21e58b0aa93fd98f44bc7d06 -c echo Container started
+trap "exit 0" 15
+
+while sleep 1 & wait $!; do :; done
