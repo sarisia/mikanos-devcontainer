@@ -9,7 +9,10 @@
 		"args": { "VARIANT": "latest" }
 	},
 
+	// =======================================================================
 	// Uncomment to enable noVNC for GitHub Codespaces
+	// =======================================================================
+
 	// "forwardPorts": [6080],
 	// "overrideCommand": false,
 	// "containerEnv": {
@@ -21,6 +24,19 @@
 	// 	// QEMU launch options. Used in `run_image.sh`
 	// 	"QEMU_OPTS": "-vnc :0"
 	// },
+
+
+	// =======================================================================
+	// Uncomment to enable WSLg integration
+	// =======================================================================
+
+	// "mounts": [
+	// 	"type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix"
+	// ],
+	// "containerEnv": {
+	// 	"DISPLAY": "${localEnv:DISPLAY}"
+	// },
+
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
