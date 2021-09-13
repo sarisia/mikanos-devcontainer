@@ -18,6 +18,9 @@
 
 3. VSCode で devcontainer を開く ([VSCode Docs](https://code.visualstudio.com/docs/remote/containers#_quick-start-open-an-existing-folder-in-a-container))
 
+4. 本の手順に従い [VcXsrv](https://sourceforge.net/projects/vcxsrv/) を導入, 起動することで,
+QEMU での動作確認ができます
+
 ## 既存のリポジトリに追加
 
 当リポジトリの `.devcontainer` ディレクトリ, 及び含まれるファイルをダウンロードし,
@@ -27,6 +30,29 @@
 
 クロスコンパイル関連の追加の設定が必要です.
 [`mikanos-docker` のドキュメント](https://github.com/sarisia/mikanos-docker#m1-mac-%E3%81%A7%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%AF) を参照して下さい.
+
+
+# WSLg で動作確認
+
+Windows 11, 及び Windows 10 21362以降では, [WSLg](https://github.com/microsoft/wslg) を
+利用することで, VcXsrv などを導入せずに QEMU での動作確認が可能です.
+
+## 設定
+
+1. [WSLg ドキュメント](https://github.com/microsoft/wslg) に従い, WSLg を有効化
+2. `.devcontainer/devcontainer.json` に設定を追加
+
+    最新の [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json) を参考に, 以下の設定を追加:
+
+    ```json
+    "mounts": [
+        "type=bind,source=/tmp/.X11-unix,target=/tmp/.X11-unix"
+    ],
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}"
+    },
+    ```
+
 
 # VNC イメージ
 
@@ -38,14 +64,12 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
 
 - 利用するイメージを `ghcr.io/sarisia/mikanos:vnc` に設定
 
-  `.devcontainer/Dockerfile` を直接変更する, もしくは最新の
-  [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json) と
-  [`.devcontainer/Dockerfile`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/Dockerfile) を参考に設定して下さい.
+    `.devcontainer/Dockerfile` を直接変更する, もしくは最新の
+    [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json)と [`.devcontainer/Dockerfile`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/Dockerfile) を参考に設定して下さい.
 
 - devcontainer 設定を追加
 
-  最新の [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json)
-  を参考に, 以下の設定を追加して下さい:
+    最新の [`.devcontainer/devcontainer.json`](https://github.com/sarisia/mikanos-devcontainer/blob/master/.devcontainer/devcontainer.json) を参考に, 以下の設定を追加して下さい:
 
     ```json
     "forwardPorts": [6080],
@@ -79,4 +103,4 @@ VNC 設定を有効にすることで, ホストに X11 Server を用意する�
 - [Docker ではじめる "ゼロからのOS自作入門" | Zenn](https://zenn.dev/sarisia/articles/6b57ea835344b6)
 - [ブラウザだけでOS自作入門しよう | Zenn](https://zenn.dev/sarisia/articles/8dbe4fe2f1c656)
 - [「ゼロからのOS自作入門」の副読本的記事 | Zenn](https://zenn.dev/karaage0703/articles/1bdb8930182c6c)
-  - devcontainer の起動方法や, macOS での X11 Server の設定などが大変分かりやすく説明されています
+    - devcontainer の起動方法や, macOS での X11 Server の設定などが大変分かりやすく説明されています
